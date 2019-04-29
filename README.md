@@ -243,7 +243,7 @@ Define allowed data type of log value.
 
 Not tested with functions or other data type.
 
-> By default allow `number`, `string`, `object`.
+> By default it allow `number`, `string`, `object`.
 
 
 **Try not use complex schema with console.table, that lose the readable format**
