@@ -2,7 +2,7 @@
 
 **A very lightweight library to create a production debugger with custom errors readable for humans. Includes errors in table format, logger and search methods with dynamic filters.**
 
-This library was destinated for debug in production and obtain errors in background, in readable format for any developer. Also can disable console logs any time.
+This library was destinated for debug in development or production environment and obtain errors in background, in readable format for any developer. Also can disable console logs any time.
 
 # Installation :cd:
 ```html
