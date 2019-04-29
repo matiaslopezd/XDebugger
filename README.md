@@ -187,7 +187,7 @@ debug.export(debug.search({
 
 ## How console logs in readable format :bar_chart:
 
-The `view` function accept `Arrays` or `Object`, that mean one or more logs.
+The `view` function accept `Array` or `Object`, that mean one or more logs.
 
 ```javascript
 debug.view(debug.logged);
