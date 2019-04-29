@@ -1,10 +1,10 @@
-# XDebugger
+# XDebugger :postbox:
 
 **A very lightweight library to create a production debugger with custom errors readable for humans. Includes errors in table format, logger and search methods with dynamic filters.**
 
 This library was destinated for debug in production and obtain errors in background, in readable format for any developer. Also can disable console logs any time.
 
-# Installation
+# Installation :cd:
 ```html
 <!-- In development environment -->
 <script src="xdebugger.js"></script>
@@ -14,11 +14,13 @@ This library was destinated for debug in production and obtain errors in backgro
 
 ```
 
-# How to use
+# How to use :fire:
 
 Use XDebugger is really easy and very flexible, it's possible define `debug`, `log`, `datatypes`, `action`, `default` and `max` variables for different logs requirements.
 
-## Basic initilize
+Can use for debug development or in production website. Also if you want for example can load debug parameters via API, like `{ debug: true, log: false }` and obtain errors or custom logs if you set.
+
+## Basic initilize :wrench:
 
 ```javascript
 // In development environment
@@ -38,7 +40,7 @@ Set `{ log: false }` deactivate complete console. That's mean XDebugger, clean c
 ```
 
 
-## How log
+## How log :inbox_tray:
 
 You can log any data you want, also XDebugger add by default `time` as _String_ and `timestamp` format as _Number_.
 
@@ -55,12 +57,12 @@ debug.log({
 })
 ```
 
-## How to listen errors
+## How to listen errors :fax:
 ```javascript
 window.onerror = (message, url, line, col, err) => debug.log(debug.onerror(message, url, line, col, err));
 ```
 
-## How to get logs
+## How to get logs :mailbox_with_mail:
 
 ```javascript
 debug.logged
@@ -69,7 +71,7 @@ debug.logged
 > [{..}]
 ```
 
-## How to search / filter logs
+## How to search / filter logs :mailbox_closed:
 
 Search was based in MongoDB queries for filter. XDebugger have 6 types of filters:
 
@@ -154,7 +156,7 @@ debug.search({
 });
 ```
 
-## How set and send log per log to a API
+## How set and send log per log to a API :outbox_tray:
 ```javascript
 const debug = new Debugger({ debug: true, action: (log) => {
     // Here your code to POST log
@@ -162,7 +164,7 @@ const debug = new Debugger({ debug: true, action: (log) => {
 });
 ```
 
-## How export and download logs
+## How export and download logs :outbox_tray:
 
 You can export all logs and download in a `JSON` file.
 
@@ -179,19 +181,63 @@ debug.export(debug.search({
 }));
 ```
 
-## How console logs in readable format
+## How console logs in readable format :bar_chart:
 
 The `view` function accept `Arrays` or `Object`, that mean one or more logs.
 
 ```javascript
 debug.view(debug.logged);
 ```
-## How to clean debugger
+## How to clean debugger :mailbox_with_no_mail:
 
 This clean logger and console.
 
 ```javascript
 debug.clean();
 ```
+## How set default data :bookmark_tabs:
+
+`default` key in object initialization parameter allow set default data like browser, version, internalCode, etc.
+
+```javascript
+const debug = new XDebugger({ debug: true, default: {
+  browser: () => // Function for get browser,
+  version: () => // Function for get browser version,
+  language: () => // Function for get user lang,
+  ...
+}});
+```
+
+Also you can rewrite default `time` and `timestamp`:
+
+```javascript
+const debug = new XDebugger({ debug: true, default: {
+  time: () => // Function API time,
+  timestamp: () => Function API time,
+}});
+```
+
+### How set max records and size of values log :straight_ruler:
+
+- `length`: set the max records logger can save
+- `size`: set the max size in MB allow values log, Ex: `{ key: "value value value value value value value " } => 80 Bytes`
+
+```javascript
+const debug = new XDebugger({ debug: true, default: {
+  max: {
+    length: 60,
+    size: 100
+  }
+}});
+```
+
+## `datatypes` Not tested yet!! :heavy_exclamation_mark:
+
+Define allow data type of log value.
+
+Not tested with functions or other data type.
+
+Now allow `number`, `string`, `object`.
 
 
+**Try not use complex schema with console.table, that lose the readable format**
