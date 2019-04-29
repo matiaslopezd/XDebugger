@@ -1,7 +1,7 @@
 const XDebugger = class {
   /*
    ** XDebugger - MIT License 2019
-   ** A very lightweight class for create a production debbuger with a custom errors with a human readable table format,
+   ** A very lightweight class for create a production debugger with a custom errors with a human readable table format,
    ** temp logger and search methods with dynamics filters.
    ** Version v0 .0 .1 - April 2019
    ** Develop for Videsk™ by Matias Lopez
@@ -22,7 +22,10 @@ const XDebugger = class {
     this.logged = [];
     this._action = obj.action;
     this._default = obj.default || {};
-    this._max = obj.max || { length: -1, size: 2000};
+    this._max = obj.max || {
+      length: -1,
+      size: 2000
+    };
     // Initialize functions
     this.filters();
     this.init();
@@ -37,7 +40,7 @@ const XDebugger = class {
     // Add timestamp
     obj.timestamp = (!obj.timestamp) ? new Date().getTime() : obj.timestamp;
     // Check if exist custom default data and add to obj
-    if(Object.keys(this._default).length > 0){
+    if (Object.keys(this._default).length > 0) {
       // If exist custom data add to obj
       Object.keys(this._default).map(async (key) => {
         // Await to finish checker type data
@@ -60,13 +63,13 @@ const XDebugger = class {
       // Execute custom function like send to API error or other action
       this._action(obj);
     }
-    if(!this._log){
+    if (!this._log) {
       // Clear all errors
       setTimeout(() => console.clear(), 100);
     }
   }
 
-  view(obj){
+  view(obj) {
 
     function consoleModel(obj) {
       // Log error and save in a temp tray
@@ -75,11 +78,11 @@ const XDebugger = class {
       console.table(obj);
     }
 
-    if(obj instanceof Array){
+    if (obj instanceof Array) {
       obj.map((log) => {
         consoleModel(log);
       })
-    }else if(obj instanceof Object) {
+    } else if (obj instanceof Object) {
       consoleModel(obj);
     }
   }
@@ -87,6 +90,7 @@ const XDebugger = class {
   clean() {
     // Clean logged
     this.logged = [];
+    console.clear();
   }
 
   search(query) {
@@ -137,8 +141,8 @@ const XDebugger = class {
     a.click();
   }
 
-  init(){
-    if(!this._log){
+  init() {
+    if (!this._log) {
       window.console.log = function () {
         return 'Developer mode is disabled.';
       }
@@ -161,7 +165,7 @@ const XDebugger = class {
     // Check size of value
     this.checkSize(value, (size) => {
       // Allow max or equal to the limit size
-      if(size <= this._max.size){
+      if (size <= this._max.size) {
         // Create variable with type
         const type = typeof value;
         // Check if data type of the value is allowed
@@ -173,7 +177,7 @@ const XDebugger = class {
             return type;
           }
         } else if (!this._datatypes.includes(type) && this._debug) {
-          if(this._log){
+          if (this._log) {
             // Log error if data type is not allowed
             // Log in console types allowed for developers
             console.error('Only allows the following types ↓');
@@ -201,7 +205,7 @@ const XDebugger = class {
     });
   }
 
-  filters(){
+  filters() {
     /*
      ** Filters of search
      ** eq: Match value of log key with query value key
@@ -222,7 +226,7 @@ const XDebugger = class {
     }
 
     // Querying
-    window.$lte = (log, obj)=> {
+    window.$lte = (log, obj) => {
       let result = null;
       if (typeof obj.value === 'number') {
         result = (log[obj.key] <= obj.value) ? log : {};
@@ -230,7 +234,7 @@ const XDebugger = class {
       return result;
     }
 
-    window.$lt = (log, obj) =>{
+    window.$lt = (log, obj) => {
       let result = null;
       if (typeof obj.value === 'number') {
         result = (log[obj.key] < obj.value) ? log : {};
@@ -238,7 +242,7 @@ const XDebugger = class {
       return result;
     }
 
-    window.$gt = (log, obj) =>{
+    window.$gt = (log, obj) => {
       let result = null;
       if (typeof obj.value === 'number') {
         result = (log[obj.key] > obj.value) ? log : {};
@@ -261,9 +265,9 @@ const XDebugger = class {
     // // Add file error
     // Add line of error in the file
     /*
-    ** Check if exist column number of error and add to error object
-    ** Not compatible with all browsers like IE11 and olders browsers version
-    */
+     ** Check if exist column number of error and add to error object
+     ** Not compatible with all browsers like IE11 and olders browsers version
+     */
     // Check if exist error description and add to error object
     return {
       message,
@@ -275,13 +279,14 @@ const XDebugger = class {
       clean: true
     };
   }
-  
+
   checkSize(obj, callback) {
     /*
-    ** Thanks to Yan Qing - Profile: https: //gist.github.com/zensh
-    ** Gist: https: //gist.github.com/zensh/4975495
-    */
+     ** Thanks to Yan Qing - Profile: https: //gist.github.com/zensh
+     ** Gist: https: //gist.github.com/zensh/4975495
+     */
     let bytes = 0;
+
     function sizeOf(obj) {
       if (obj !== null && obj !== undefined) {
         switch (typeof obj) {
@@ -314,11 +319,10 @@ const XDebugger = class {
     };
 
     const result = formatByteSize(sizeOf(obj));
-    if(typeof callback === 'function'){
+    if (typeof callback === 'function') {
       callback(result)
-    }else{
+    } else {
       return result;
     }
   };
 };
-

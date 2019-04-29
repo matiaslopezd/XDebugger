@@ -90,6 +90,7 @@ const XDebugger = class {
   clean() {
     // Clean logged
     this.logged = [];
+    console.clear();
   }
 
   search(query) {
