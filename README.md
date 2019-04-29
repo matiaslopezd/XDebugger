@@ -20,7 +20,7 @@ Use XDebugger is really easy and very flexible, it's possible define `debug`, `l
 
 Can use for debug development or in production website. Also if you want for example can load debug parameters via API, like `{ debug: true, log: false }` and obtain errors or custom logs if you set.
 
-## Basic initilize :wrench:
+## Basic initialization :wrench:
 
 ```javascript
 // In development environment
