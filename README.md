@@ -6,7 +6,7 @@ This library was destinated for debug in development or production environment a
 
 **Demo**: Soon :clock10:
 
-See `example` folder for now :smiley:
+See `examples` folder for now :smiley:
 
 # Installation :cd:
 ```html
