@@ -4,7 +4,9 @@
 
 This library was destinated for debug in development or production environment and obtain errors in background, with a readable format for any developer, also can disable console logs any time.
 
-**Demo**: Soon
+**Demo**: Soon :clock10:
+
+See `example` folder for now :smiley:
 
 # Installation :cd:
 ```html
