@@ -31,7 +31,7 @@ const debug = new XDebugger({ debug: true });
 
 ```
 
-Set `{ log: false }` deactivate complete console. That's mean XDebugger, clean console for not show any log, info, warn, table and error. If try log anything console show:
+Set `{ log: false }` disable completely console. That's mean XDebugger, clean console for not show any log, info, warn, table and error. If try log anything console show:
 
 ```javascript
   Console was cleared
