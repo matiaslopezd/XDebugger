@@ -204,10 +204,12 @@ debug.clean();
 `default` key in object initialization parameter allow set default data like browser, version, internalCode, etc.
 
 ```javascript
+// 'library' as third party source functionality
+
 const debug = new XDebugger({ debug: true, default: {
-  browser: () => // Function for get browser,
-  version: () => // Function for get browser version,
-  language: () => // Function for get user lang,
+  browser: library.browser.name,
+  version: library.browser.version,
+  language: library.browser.lang,
   ...
 }});
 ```
@@ -216,8 +218,8 @@ Also you can rewrite default `time` and `timestamp`:
 
 ```javascript
 const debug = new XDebugger({ debug: true, default: {
-  time: () => // Function API time,
-  timestamp: () => Function API time,
+  time: mycustomtime.toString(),
+  timestamp: mycustomtime.getTime(),
 }});
 ```
 
