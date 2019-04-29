@@ -239,7 +239,7 @@ const debug = new XDebugger({ debug: true, default: {
 
 ## `datatypes` Not tested yet!! :heavy_exclamation_mark:
 
-Define allowED data type of log value.
+Define allowed data type of log value.
 
 Not tested with functions or other data type.
 
