@@ -239,11 +239,11 @@ const debug = new XDebugger({ debug: true, default: {
 
 ## `datatypes` Not tested yet!! :heavy_exclamation_mark:
 
-Define allow data type of log value.
+Define allowED data type of log value.
 
 Not tested with functions or other data type.
 
-Now allow `number`, `string`, `object`.
+> By default allow `number`, `string`, `object`.
 
 
 **Try not use complex schema with console.table, that lose the readable format**
