@@ -226,7 +226,7 @@ const debug = new XDebugger({ debug: true, default: {
 ### How set max records and size of values log :straight_ruler:
 
 - `length`: set the max records logger can save
-- `size`: set the max size in MB allow values log, Ex: `{ key: "value value value value value value value " } => 80 Bytes`
+- `size`: set the max size value of log allowed in MB, Ex: `{ key: "value value value value value value value " } => 80 Bytes`
 
 ```javascript
 const debug = new XDebugger({ debug: true, default: {
