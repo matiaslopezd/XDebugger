@@ -1,7 +1,7 @@
 const XDebugger = class {
   /*
    ** XDebugger - MIT License 2019
-   ** A very lightweight class for create a production debbuger with a custom errors with a human readable table format,
+   ** A very lightweight class for create a production debugger with a custom errors with a human readable table format,
    ** temp logger and search methods with dynamics filters.
    ** Version v0 .0 .1 - April 2019
    ** Develop for Videsk™ by Matias Lopez
