@@ -4,6 +4,27 @@
 
 This library was destinated for debug in development or production environment and obtain errors in background, with a readable format for any developer, also can disable console logs any time.
 
+1. [Demos](https://github.com/matiaslopezd/xdebugger#demos)
+2. [Installation](https://github.com/matiaslopezd/xdebugger#installation-cd)
+3. [How to use](https://github.com/matiaslopezd/xdebugger#how-to-use-fire)
+  - [Basic Initialization](https://github.com/matiaslopezd/xdebugger#basic-initialization-wrench)
+  - [Log](https://github.com/matiaslopezd/xdebugger#how-log-inbox_tray)
+  - [Listen global errors](https://github.com/matiaslopezd/xdebugger#how-to-listen-errors-fax)
+  - [Get logs](https://github.com/matiaslopezd/xdebugger#how-to-get-logs-mailbox_with_mail)
+  - [Search / Filter logs](https://github.com/matiaslopezd/xdebugger#how-to-search--filter-logs-mailbox_closed)
+    - [$eq](https://github.com/matiaslopezd/xdebugger#eq-search)
+    - [$cnt](https://github.com/matiaslopezd/xdebugger#cnt-search)
+    - [$lte](https://github.com/matiaslopezd/xdebugger#lte-search)
+    - [$lt](https://github.com/matiaslopezd/xdebugger#lt-search)
+    - [$gte](https://github.com/matiaslopezd/xdebugger#gte-search)
+    - [$gt](https://github.com/matiaslopezd/xdebugger#gt-search)
+  - [Send logs to API](https://github.com/matiaslopezd/xdebugger#how-set-and-send-log-per-log-to-a-api-outbox_tray)
+  - [Export and dowload logs](https://github.com/matiaslopezd/xdebugger#how-export-and-download-logs-outbox_tray)
+  - [View logs in console](https://github.com/matiaslopezd/xdebugger#how-console-logs-in-readable-format-bar_chart)
+  - [Clean logger](https://github.com/matiaslopezd/xdebugger#how-to-clean-debugger-mailbox_with_no_mail)
+  - [Default data of logs](https://github.com/matiaslopezd/xdebugger#how-set-default-data-bookmark_tabs)
+  - [Set max logs and size](https://github.com/matiaslopezd/xdebugger#how-set-max-records-and-size-of-values-log-straight_ruler)
+
 ## Demos
 - [Simple initialization](https://matiaslopezd.github.io/xdebugger/examples/generate)
 - [Custom initialization](https://matiaslopezd.github.io/xdebugger/examples/custom_init)
