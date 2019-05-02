@@ -4,11 +4,11 @@
 
 This library was destinated for debug in development or production environment and obtain errors in background, with a readable format for any developer, also can disable console logs any time.
 
-**Demo**: Soon :clock10:
+## Demos
+- [Simple initialization](https://matiaslopezd.github.io/xdebugger/examples/generate)
+- [Custom initialization](https://matiaslopezd.github.io/xdebugger/examples/custom_init)
 
-See `examples` folder for now :smiley:
-
-# Installation :cd:
+## Installation :cd:
 ```html
 <!-- In development environment -->
 <script src="xdebugger.js"></script>
@@ -18,7 +18,7 @@ See `examples` folder for now :smiley:
 
 ```
 
-# How to use :fire:
+## How to use :fire:
 
 Use XDebugger is really easy and very flexible, it's possible define `debug`, `log`, `datatypes`, `action`, `default` and `max` variables for different logs requirements.
 
