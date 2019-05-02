@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Testing XDebugger</title>
 </head>
+
 <body>
   <button>Generate Error</button>
   <p>Check the console</p>
   <script src="../xdebugger.js"></script>
+  <script>
+    const debug = new XDebugger({
+      debug: true,
+      log: false
+    });
+    document.querySelector('button').onclick = () => {
+      debug.log({
+        message: 'This is a message error',
+        code: 102,
+        explanation: 'This is the explanation about the error',
+        response: 'This is the response and maybe solution of error',
+        error: 'Plain error'
+      })
+    }
+  </script>
 </body>
+
 </html>
