@@ -11,7 +11,7 @@
   <p>Check the console</p>
   <script src="../xdebugger.js"></script>
   <script>
-    const debug = new XDebugger({ debug: true, log: false });
+    const debug = new XDebugger({ debug: true, log: true });
     document.querySelector('button').onclick = () => {
       debug.log({
         message: 'This is a message error',
