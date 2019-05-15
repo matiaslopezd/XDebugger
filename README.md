@@ -189,7 +189,7 @@ const debug = new Debugger({ debug: true, action: (log) => {
 });
 ```
 
-## How export and download logs :outbox_tray:
+## How export and download logs
 
 You can export all logs and download in a `JSON` file.
 
