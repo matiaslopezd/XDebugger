@@ -26,8 +26,8 @@ This library was destinated for debug in development or production environment a
   - [Set max logs and size](https://github.com/matiaslopezd/XDebugger#how-set-max-records-and-size-of-values-log)
 
 ## Demos
-- [Simple initialization](https://matiaslopezd.github.io/xdebugger/examples/generate)
-- [Custom initialization](https://matiaslopezd.github.io/xdebugger/examples/custom_init)
+- [Simple initialization](https://matiaslopezd.github.io/XDebugger/examples/generate)
+- [Custom initialization](https://matiaslopezd.github.io/XDebugger/examples/custom_init)
 
 ## Installation
 ```html
