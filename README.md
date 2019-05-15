@@ -6,7 +6,7 @@ This library was destinated for debug in development or production environment a
 
 1. [Demos](https://github.com/matiaslopezd/xdebugger#demos)
 2. [Installation](https://github.com/matiaslopezd/XDebugger#installation)
-3. [How to use](https://github.com/matiaslopezd/XDebugger#how-to-usee)
+3. [How to use](https://github.com/matiaslopezd/XDebugger#how-to-use)
   - [Basic Initialization](https://github.com/matiaslopezd/XDebugger#basic-initialization)
   - [Log](https://github.com/matiaslopezd/XDebugger#how-log)
   - [Listen global errors](https://github.com/matiaslopezd/XDebugger#how-to-listen-errors)
