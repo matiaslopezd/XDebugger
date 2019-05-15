@@ -29,7 +29,7 @@ This library was destinated for debug in development or production environment a
 - [Simple initialization](https://matiaslopezd.github.io/xdebugger/examples/generate)
 - [Custom initialization](https://matiaslopezd.github.io/xdebugger/examples/custom_init)
 
-## Installation :cd:
+## Installation
 ```html
 <!-- In development environment -->
 <script src="xdebugger.js"></script>
@@ -39,13 +39,13 @@ This library was destinated for debug in development or production environment a
 
 ```
 
-## How to use :fire:
+## How to use
 
 Use XDebugger is really easy and very flexible, it's possible define `debug`, `log`, `datatypes`, `action`, `default` and `max` variables for different logs requirements.
 
 Can use for debug development or in production website. Also if you want for example can load debug parameters via API, like `{ debug: true, log: false }` and obtain errors or custom logs if you set.
 
-## Basic initialization :wrench:
+## Basic initialization
 
 ```javascript
 // In development environment
@@ -65,7 +65,7 @@ Set `{ log: false }` disable completely console. That's mean XDebugger, clean co
 ```
 
 
-## How log :inbox_tray:
+## How log
 
 You can log any data you want, also XDebugger add by default `time` as _String_ and `timestamp` format as _Number_.
 
@@ -82,12 +82,12 @@ debug.log({
 })
 ```
 
-## How to listen errors :fax:
+## How to listen errors
 ```javascript
 window.onerror = (message, url, line, col, err) => debug.log(debug.onerror(message, url, line, col, err));
 ```
 
-## How to get logs :mailbox_with_mail:
+## How to get logs
 
 ```javascript
 debug.logged
@@ -96,7 +96,7 @@ debug.logged
 > [{..}]
 ```
 
-## How to search / filter logs :mailbox_closed:
+## How to search / filter logs
 
 Search was based in MongoDB queries for filter. XDebugger have 6 types of filters:
 
@@ -181,7 +181,7 @@ debug.search({
 });
 ```
 
-## How set and send log per log to a API :outbox_tray:
+## How set and send log per log to a API
 ```javascript
 const debug = new Debugger({ debug: true, action: (log) => {
     // Here your code to POST log
@@ -206,21 +206,21 @@ debug.export(debug.search({
 }));
 ```
 
-## How console logs in readable format :bar_chart:
+## How console logs in readable format
 
 The `view` function accept `Array` or `Object`, that mean one or more logs.
 
 ```javascript
 debug.view(debug.logged);
 ```
-## How to clean debugger :mailbox_with_no_mail:
+## How to clean debugger
 
 This clean logger and console.
 
 ```javascript
 debug.clean();
 ```
-## How set default data :bookmark_tabs:
+## How set default data
 
 `default` key in object initialization parameter allow set default data like browser, version, internalCode, etc.
 
@@ -244,7 +244,7 @@ const debug = new XDebugger({ debug: true, default: {
 }});
 ```
 
-### How set max records and size of values log :straight_ruler:
+### How set max records and size of values log
 
 - `length`: set the max records logger can save
 - `size`: set the max size value of log allowed in MB, Ex: `{ key: "value value value value value value value " } => 80 Bytes`
@@ -258,7 +258,7 @@ const debug = new XDebugger({ debug: true, default: {
 }});
 ```
 
-## `datatypes` Not tested yet!! :heavy_exclamation_mark:
+## `datatypes` Not tested yet!!
 
 Define allowed data type of log value.
 
