@@ -1,4 +1,4 @@
-# XDebugger :postbox:
+![XDebugger](https://user-images.githubusercontent.com/23618492/57747590-348ed200-76a4-11e9-8832-ae7b7ed352fb.png)
 
 **A very lightweight library to create a production debugger with custom errors readable for humans. Includes errors in table format, logger and search methods with dynamic filters.**
 
