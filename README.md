@@ -4,7 +4,7 @@
 
 This library was destinated for debug in development or production environment and obtain errors in background, with a readable format for any developer, also can disable console logs any time.
 
-1. [Demos](https://github.com/matiaslopezd/xdebugger#demos)
+1. [Demos](https://github.com/matiaslopezd/XDebugger#demos)
 2. [Installation](https://github.com/matiaslopezd/XDebugger#installation)
 3. [How to use](https://github.com/matiaslopezd/XDebugger#how-to-use)
   - [Basic Initialization](https://github.com/matiaslopezd/XDebugger#basic-initialization)
@@ -12,12 +12,12 @@ This library was destinated for debug in development or production environment a
   - [Listen global errors](https://github.com/matiaslopezd/XDebugger#how-to-listen-errors)
   - [Get logs](https://github.com/matiaslopezd/XDebugger#how-to-search--filter-logs)
   - [Search / Filter logs](https://github.com/matiaslopezd/XDebugger#how-to-search--filter-logs)
-    - [$eq](https://github.com/matiaslopezd/xdebugger#eq-search)
-    - [$cnt](https://github.com/matiaslopezd/xdebugger#cnt-search)
-    - [$lte](https://github.com/matiaslopezd/xdebugger#lte-search)
-    - [$lt](https://github.com/matiaslopezd/xdebugger#lt-search)
-    - [$gte](https://github.com/matiaslopezd/xdebugger#gte-search)
-    - [$gt](https://github.com/matiaslopezd/xdebugger#gt-search)
+    - [$eq](https://github.com/matiaslopezd/XDebugger#eq-search)
+    - [$cnt](https://github.com/matiaslopezd/XDebugger#cnt-search)
+    - [$lte](https://github.com/matiaslopezd/XDebugger#lte-search)
+    - [$lt](https://github.com/matiaslopezd/XDebugger#lt-search)
+    - [$gte](https://github.com/matiaslopezd/XDebugger#gte-search)
+    - [$gt](https://github.com/matiaslopezd/XDebugger#gt-search)
   - [Send logs to API](https://github.com/matiaslopezd/XDebugger#how-set-and-send-log-per-log-to-a-api)
   - [Export and dowload logs](https://github.com/matiaslopezd/XDebugger#how-export-and-download-logs-outbox_tray)
   - [View logs in console](https://github.com/matiaslopezd/XDebugger#how-console-logs-in-readable-format)
