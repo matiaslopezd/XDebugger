@@ -2,34 +2,41 @@
 
 **A very lightweight library to create a production debugger with custom errors readable for humans. Includes errors in table format, logger and search methods with dynamic filters.**
 
-This library was destinated for debug in development or production environment and obtain errors in background, with a readable format for any developer, also can disable console logs any time.
+![size](https://img.shields.io/bundlephobia/min/xdebugger) ![license](https://img.shields.io/github/license/matiaslopezd/XDebugger) ![version](https://img.shields.io/npm/v/xdebugger) ![quality](https://img.shields.io/codacy/grade/a972df046eb545898ade3fd7d1381beb)
 
-1. [Demos](https://github.com/matiaslopezd/XDebugger#demos)
-2. [Installation](https://github.com/matiaslopezd/XDebugger#installation)
-3. [How to use](https://github.com/matiaslopezd/XDebugger#how-to-use)
-  - [Basic Initialization](https://github.com/matiaslopezd/XDebugger#basic-initialization)
-  - [Log](https://github.com/matiaslopezd/XDebugger#how-log)
-  - [Listen global errors](https://github.com/matiaslopezd/XDebugger#how-to-listen-errors)
-  - [Get logs](https://github.com/matiaslopezd/XDebugger#how-to-search--filter-logs)
-  - [Search / Filter logs](https://github.com/matiaslopezd/XDebugger#how-to-search--filter-logs)
-    - [$eq](https://github.com/matiaslopezd/XDebugger#eq-search)
-    - [$cnt](https://github.com/matiaslopezd/XDebugger#cnt-search)
-    - [$lte](https://github.com/matiaslopezd/XDebugger#lte-search)
-    - [$lt](https://github.com/matiaslopezd/XDebugger#lt-search)
-    - [$gte](https://github.com/matiaslopezd/XDebugger#gte-search)
-    - [$gt](https://github.com/matiaslopezd/XDebugger#gt-search)
-  - [Send logs to API](https://github.com/matiaslopezd/XDebugger#how-set-and-send-log-per-log-to-a-api)
-  - [Export and dowload logs](https://github.com/matiaslopezd/XDebugger#how-export-and-download-logs-outbox_tray)
-  - [View logs in console](https://github.com/matiaslopezd/XDebugger#how-console-logs-in-readable-format)
-  - [Clean logger](https://github.com/matiaslopezd/XDebugger#how-to-clean-debugger)
-  - [Default data of logs](https://github.com/matiaslopezd/XDebugger#how-set-default-data)
-  - [Set max logs and size](https://github.com/matiaslopezd/XDebugger#how-set-max-records-and-size-of-values-log)
+This library with zero dependencies was designed for debug/capture errors in development or production environment and obtain errors in background, with a readable format for any developer, also can disable console logs any time.
+
+1. [Demos](#demos)
+2. [Installation](#installation)
+3. [How to use](#how-to-use)
+  - [Basic Initialization](#basic-initialization)
+  - [Log](#how-log)
+  - [Listen global errors](#how-to-listen-errors)
+  - [Get logs](#how-to-search--filter-logs)
+  - [Search / Filter logs](#how-to-search--filter-logs)
+    - [$eq](#eq-search)
+    - [$cnt](#cnt-search)
+    - [$lte](#lte-search)
+    - [$lt](#lt-search)
+    - [$gte](#gte-search)
+    - [$gt](#gt-search)
+  - [Send logs to API](#how-set-and-send-log-per-log-to-a-api)
+  - [Export and download logs](#how-export-and-download-logs)
+  - [View logs in console](#how-console-logs-in-readable-format)
+  - [Clean logger](#how-to-clean-debugger)
+  - [Default data of logs](#how-set-default-data)
+  - [Set max logs and size](#how-set-max-records-and-size-of-values-log)
 
 ## Demos
 - [Simple initialization](https://matiaslopezd.github.io/XDebugger/examples/generate)
 - [Custom initialization](https://matiaslopezd.github.io/XDebugger/examples/custom_init)
 
 ## Installation
+npm installation:
+```js
+npm i xdebugger
+```
+Or without npm:
 ```html
 <!-- In development environment -->
 <script src="xdebugger.js"></script>
@@ -44,6 +51,11 @@ This library was destinated for debug in development or production environment a
 Use XDebugger is really easy and very flexible, it's possible define `debug`, `log`, `datatypes`, `action`, `default` and `max` variables for different logs requirements.
 
 Can use for debug development or in production website. Also if you want for example can load debug parameters via API, like `{ debug: true, log: false }` and obtain errors or custom logs if you set.
+
+In case use npm:
+```js
+import XDebugger from 'xdebugger';
+```
 
 ## Basic initialization
 
