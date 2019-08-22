@@ -1,4 +1,4 @@
-const XDebugger = class {
+class XDebugger{
   /*
    ** XDebugger - MIT License 2019
    ** A very lightweight class for create a production debugger with a custom errors with a human readable table format,
@@ -11,7 +11,7 @@ const XDebugger = class {
    ** Info Error suggested:
    ** Message: Short text about error, explanation, response, error by default, ex: Function expected
    ** Code: Public code number of error for identify, ex: 407
-   ** Explanation: Large description about the captured error, ex: evaluator expect function and recieve a ${typeof}.
+   ** Explanation: Large description about the captured error, ex: evaluator expect function and receive a ${typeof}.
    ** Response: The solution for error, ex: Change the value by a function
    ** Error: Plain error, Ex: Uncaught TypeError: y is not a function
    */
@@ -33,7 +33,7 @@ const XDebugger = class {
 
   // eslint-disable-next-line class-methods-use-this
   log(obj) {
-    // If obj is not definied create but empty
+    // If obj is not defined create but empty
     obj = (!obj) ? {} : obj;
     // Add time
     obj.time = (!obj.time) ? new Date().toString() : obj.time;
@@ -95,7 +95,7 @@ const XDebugger = class {
 
   search(query) {
     // Return log filtered by query
-    // Initilize filters
+    // Initialize filters
     // Create a temp array, mapped array and result
     const tempArray = [];
     // Check if key and query are correct data types
@@ -218,12 +218,12 @@ const XDebugger = class {
     window.$eq = (log, obj) => {
       // Return only if value of key match
       return (log[obj.key] === obj.value) ? log : {};
-    }
+    };
 
     window.$cnt = (log, obj) => {
       // Return only if value of key contain value
       return (log[obj.key].includes(obj.value)) ? log : {};
-    }
+    };
 
     // Querying
     window.$lte = (log, obj) => {
@@ -232,7 +232,7 @@ const XDebugger = class {
         result = (log[obj.key] <= obj.value) ? log : {};
       }
       return result;
-    }
+    };
 
     window.$lt = (log, obj) => {
       let result = null;
@@ -240,7 +240,7 @@ const XDebugger = class {
         result = (log[obj.key] < obj.value) ? log : {};
       }
       return result;
-    }
+    };
 
     window.$gt = (log, obj) => {
       let result = null;
@@ -248,7 +248,7 @@ const XDebugger = class {
         result = (log[obj.key] > obj.value) ? log : {};
       }
       return result;
-    }
+    };
 
     window.$gte = (log, obj) => {
       let result = null;
@@ -272,10 +272,10 @@ const XDebugger = class {
     return {
       message,
       url,
-      file: url.substring(url.lastIndexOf('/') + 1) || 'undefinied',
+      file: url.substring(url.lastIndexOf('/') + 1) || undefined,
       line,
       column: column || '-',
-      error: error.message || error || 'undefinied',
+      error: error.message || error || undefined,
       clean: true
     };
   }
@@ -300,7 +300,7 @@ const XDebugger = class {
             bytes += 4;
             break;
           case 'object':
-            var objClass = Object.prototype.toString.call(obj).slice(8, -1);
+            const objClass = Object.prototype.toString.call(obj).slice(8, -1);
             if (objClass === 'Object' || objClass === 'Array') {
               for (var key in obj) {
                 if (!obj.hasOwnProperty(key)) continue;
@@ -311,12 +311,12 @@ const XDebugger = class {
         }
       }
       return bytes;
-    };
+    }
 
     function formatByteSize(bytes) {
       // Divided for get MiB scale
       return bytes / 1048576;
-    };
+    }
 
     const result = formatByteSize(sizeOf(obj));
     if (typeof callback === 'function') {
@@ -325,4 +325,6 @@ const XDebugger = class {
       return result;
     }
   };
-};
+}
+
+module.exports = XDebugger;
