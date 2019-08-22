@@ -2,7 +2,7 @@
 
 **A very lightweight library to create a production debugger with custom errors readable for humans. Includes errors in table format, logger and search methods with dynamic filters.**
 
-![size](https://img.shields.io/bundlephobia/min/xdebugger) ![license](https://img.shields.io/github/license/matiaslopezd/XDebugger) ![version](https://img.shields.io/npm/v/xdebugger) ![quality](https://img.shields.io/codacy/grade/a972df046eb545898ade3fd7d1381beb) ![issues](https://img.shields.io/github/issues/matiaslopezd/XDebugger)
+![npm bundle size](https://img.shields.io/bundlephobia/min/xdebugger) ![size-repo](https://img.shields.io/github/languages/code-size/matiaslopezd/XDebugger) ![license](https://img.shields.io/github/license/matiaslopezd/XDebugger) ![version](https://img.shields.io/npm/v/xdebugger) ![quality](https://img.shields.io/codacy/grade/a972df046eb545898ade3fd7d1381beb) ![issues](https://img.shields.io/github/issues/matiaslopezd/XDebugger)
 
 This library with zero dependencies was designed for debug/capture errors in development or production environment and obtain errors in background, with a readable format for any developer, also can disable console logs any time.
 
